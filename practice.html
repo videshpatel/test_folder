@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div class="products"></div>
+
+    <script>
+      var products = [
+        { id: 1, name: "Marker", price: 2.5 },
+        { id: 2, name: "paper", price: 2.0 },
+        { id: 3, name: "eraser", price: 1.5 },
+        { id: 4, name: "pencil", price: 0.5 }
+      ];
+
+      // console.log (products)
+      var productsHTML = "";
+
+      products.forEach(function(product) {
+        productsHTML += "<h2>" + product.name + "</h2>" + "<p>" + product.price + "</p>";
+      });
+      var productsDiv = document.querySelector(".products");
+      productsDiv.innerHTML = productsHTML;
+      console.log(productsHTML);
+    </script>
+  </body>
+</html>
